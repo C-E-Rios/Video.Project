@@ -1,0 +1,98 @@
+ 
+@import "compass/css3";
+@import "normalize";
+@import "bits";
+@import "forms";
+@import "typography";
+@import "grid";
+
+
+html, body { 
+	height: 100%
+}
+
+// HEADER - MAIN-BODY DIV -FOR- STICKY FOOTER //
+
+
+.header-mainbody-wrapper {
+	min-height: 100%;
+	height: auto;
+	height: 100%;
+	margin: 0 auto -60px;
+}
+
+
+
+// HEADER //
+
+
+.logo { 
+	background: url(../images/logo.png) no-repeat;
+	float: left;
+	width: 396px; height: 85px;
+	text-indent: -100%;
+	margin: 1em 1em;
+}
+
+.user {
+	float: right;
+	width: 14em; height: 5em;
+		.login, .signup { 
+			float: left;
+			padding: 1em;
+	}
+}
+
+
+
+// NAV //
+
+nav {
+	float: left;
+		ul, ul li { margin: 0; padding: 0;
+	}
+}
+
+// MAIN-BODY //
+
+
+
+// SLIDER //
+
+article figure {
+	float: left;
+	width: 10em;
+}
+
+article p {
+	float: left;
+	width: 40em;
+}
+
+
+// WIDGETS //
+
+.widget-topusers {
+	float: left;
+	width: 32%;
+}
+
+.widget-topvideos {
+	float: left;
+	width: 68%;
+}
+
+
+
+
+
+
+footer {
+	height: 60px;
+}
+
+
+
+
+
+

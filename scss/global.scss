@@ -66,6 +66,21 @@ article p {
 	margin: 0;
 }
 
+.post-author {
+	float: left;
+	background: #000;
+	color: #fff;
+	font-size: 0.7em;
+	width: 59%;
+	padding: 0.4em 1.4em;
+	margin: 0.2em 1.5em 0 0;
+}
+
+
+.post-video select, input, textarea {
+	margin: 0.4em 0;
+}
+
 
 // GALLERY //
 
@@ -74,36 +89,38 @@ article p {
 	margin: 2em 0;
 }
 
-.box {
+.mainStory-gallery-img-container {
    float: left;
    position: relative;
    width: 33%;
    padding-bottom: 20%;
 }
-.boxInner {
+.img-holder {
    position: absolute;
    overflow: hidden;
 }
-.boxInner img {
+.img-holder img {
    width: 100%;
 }
-.boxInner .titleBox {
+.img-holder .titleBox {
    position: absolute;
    bottom: 0;
    left: 0;
    right: 0;
-   margin-bottom: -35px;
+   margin-bottom: 0px;
    background: none;
    color: #fff;
+   opacity: 0;
    padding: 8px;
    text-align: center;
    font-size: 0.8em;
    @include transition(all 0.3s ease-out);
 
 }
-.boxInner:hover .titleBox, .boxInner.touchFocus .titleBox {
-   margin-bottom: 0;
+.img-holder:hover .titleBox {
+   margin-bottom: 30px;
    background: rgba(0, 0, 0, 0.5);
+   opacity: 1;
 
 }
 
@@ -132,6 +149,11 @@ footer {
 }
 
 
+// RIGHT-SIDEBAR //
+
+.post-video h2 {
+	font-size: 1.4em;
+}
 
 
 

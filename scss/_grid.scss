@@ -1,6 +1,6 @@
 .grid-container {
 	width: 100%;
-	padding: 20px 0 0 20px;
+	padding: 0 2em;
 }
 
 // 3 COLUMNS //
@@ -11,12 +11,12 @@
 }
 
 .grid-2-3 {
-	width: 63%;
+	width: 60%;
 	float: left;
+	padding: 0 9% 0 0;
 }
 
 .grid-3-3 {
 	width: 20%;
 	float: left;
-	padding: 0 20px 0 0;
 }

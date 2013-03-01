@@ -4,16 +4,24 @@
 @import "bits";
 @import "forms";
 @import "typography";
+@import "icons";
 @import "grid";
 
 
-html, body { 
-	height: 100%
+html { 
+	background:url('../images/bgBrokenNoise.png') repeat;
+	height: 100%;
 }
 
 
 
+
+
 // HEADER //
+
+.headerContainer {
+	padding: 1.5em $ContainerPadding*2 0.5em 1em;
+}
 
 
 .logo { 
@@ -21,12 +29,12 @@ html, body {
 	float: left;
 	width: 396px; height: 85px;
 	text-indent: -100%;
-	margin: 1em 1em;
 }
 
 .user {
 	float: right;
-	width: 14em; height: 5em;
+	width: 34em; height: 5em;
+	background: #fff;
 		.login, .signup { 
 			float: left;
 			padding: 1em;
@@ -35,15 +43,54 @@ html, body {
 
 
 
+
+
+
 // NAV //
 
+
 nav {
-	float: left;
-		ul, ul li { margin: 0; padding: 0;
+	background: #fff;
+
+		ul { 
+		position: relative;
+		border-bottom: 1px dotted #000;
+		margin: 0;
+		padding: 0.5em 1em 0;
+	}
+	ul:nth-child(-n+1) {
+		border-top: 1px dotted #000;
+	}
+	ul li { 
+		display: inline;
+
 	}
 }
 
+.icon-size {
+	font-size: 2em;
+	padding: 0 0.5em 0 0;
+}
+
+.nav-text a {
+	position: absolute;
+	top: 1em;
+}
+
+
+
+
 // MAIN-BODY //
+
+.main-container {
+	padding: 0 1.5em;
+	.mainStory {
+		background: #fff;
+		padding: $ContainerPadding;
+	}
+}
+
+
 
 
 
@@ -58,12 +105,8 @@ article h1 {
 
 article figure img {
 	float: left;
-	width: 250px; height: 144px;
-	margin: 0 1em 0 0;
-}
-
-article p {
-	margin: 0;
+	width: 275px; height: 144px;
+	margin: 0 1em 2em 0;
 }
 
 .post-author {
@@ -71,15 +114,19 @@ article p {
 	background: #000;
 	color: #fff;
 	font-size: 0.7em;
-	width: 59%;
+	width: 38.5%;
 	padding: 0.4em 1.4em;
-	margin: 0.2em 1.5em 0 0;
+	margin: 0 11em 0.5em 0; // 11em to make paragraph start in new line. How to fix this? //
+	
+}
+
+article p {
+	margin: 0;
 }
 
 
-.post-video select, input, textarea {
-	margin: 0.4em 0;
-}
+
+
 
 
 // GALLERY //
@@ -128,6 +175,11 @@ article p {
 
 // WIDGETS //
 
+.widget { 
+	background: #fff;
+	padding: 0 $ContainerPadding;
+}
+
 .widget-topusers {
 	float: left;
 	width: 32%;
@@ -142,18 +194,86 @@ article p {
 
 
 
-
-footer {
-
-	width: 100%;
-}
-
-
 // RIGHT-SIDEBAR //
+
+.rightSidebar {
+	background: #fff;
+	padding: $ContainerPadding;
+}
 
 .post-video h2 {
 	font-size: 1.4em;
 }
+
+.post-video select, input, textarea {
+	margin: 0.4em 0;
+}
+
+
+
+
+
+
+// FOOTER //
+
+
+footer {
+	width: 100%;
+	padding: $ContainerPadding*2 $ContainerPadding*2 0;
+	.footerContainer {
+		padding: $ContainerPadding 0 $ContainerPadding*2;
+		background: #fff;
+	}
+	.footer-left, .footer-right {
+		float: left;
+		width: 25%;
+		text-align: center;
+		margin: 0.5em 0 0;
+	}
+
+	.footer-mid {
+		float: left;
+		width: 50%;
+		text-align: center;
+	}
+
+	a.twitter, a.facebook, a.pinterest {
+		width: 40px;
+		height: 40px;
+		display: inline-block;
+		background-position: 0 0;
+		-webkit-transition-property: background-position;
+		-moz-transition-property: background-position;
+		-o-transition-property: background-position;
+		transition-property: background-position;
+		-webkit-transition-duration: .2s;
+		-moz-transition-duration: .2s;
+		-o-transition-duration: .2s;
+		transition-duration: .2s;
+	}
+	a.twitter {
+		background: url('../images/social-twitter.png') no-repeat;
+	}
+	a.facebook {
+		background: url('../images/social-facebook.png') no-repeat;
+	}
+	a.pinterest {
+		background: url('../images/social-pinterest.png') no-repeat;
+	}
+	a.twitter:hover {
+		background: url('../images/social-twitter.png') 100% 0 no-repeat;
+		background-position: 0 100%;
+	}
+	a.facebook:hover {
+		background: url('../images/social-facebook.png') 100% 0 no-repeat;
+		background-position: 0 100%;
+	}
+	a.pinterest:hover {
+		background: url('../images/social-pinterest.png') 100% 0 no-repeat;
+		background-position: 0 100%;
+	}
+}
+
 
 
 

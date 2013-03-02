@@ -479,7 +479,7 @@ sub {
 
 .grid-container {
   width: 100%;
-  padding: 1em 4em; }
+  padding: 0 4em; }
 
 .grid-1-3 {
   width: 17%;
@@ -498,20 +498,21 @@ html {
   height: 100%; }
 
 .headerContainer {
-  padding: 1.5em 4em 0.5em 1em; }
+  padding: 1.5em 4em 0 4em; }
 
 .logo {
   background: url(../images/logo.png) no-repeat;
   float: left;
-  width: 396px;
-  height: 85px;
+  width: 319px;
+  height: 100px;
   text-indent: -100%; }
 
 .user {
   float: right;
   width: 34em;
   height: 5em;
-  background: #fff; }
+  background: #fff;
+  margin: 1em 0 1.5em; }
   .user .login, .user .signup {
     float: left;
     padding: 1em; }
@@ -554,12 +555,20 @@ article figure img {
 
 .post-author {
   float: left;
+  position: relative;
   background: #000;
   color: #fff;
   font-size: 0.7em;
-  width: 38.5%;
-  padding: 0.4em 1.4em;
-  margin: 0 11em 0.5em 0; }
+  width: 55%;
+  padding: 1em 1.4em;
+  margin: 0 0em 0.5em 0;
+  border-bottom: 4px solid #cf3104; }
+  .post-author .icon-size {
+    font-size: 4.5em;
+    color: #fff;
+    position: absolute;
+    top: -9px;
+    right: 0.1em; }
 
 article p {
   margin: 0; }
@@ -617,10 +626,24 @@ article p {
 
 .rightSidebar {
   background: #fff;
-  padding: 2em; }
+  padding: 2em;
+  position: relative; }
+  .rightSidebar h2.joinUsH2 {
+    width: 80%;
+    border-bottom: 1px dotted #ccc; }
+  .rightSidebar span {
+    position: absolute;
+    right: 1.9em;
+    top: 1.15em; }
 
 .post-video h2 {
   font-size: 1.4em; }
+  .post-video h2 .icon-size {
+    font-size: 3em;
+    color: #000; }
+
+.hideP {
+  display: none; }
 
 .post-video select, input, textarea {
   margin: 0.4em 0; }

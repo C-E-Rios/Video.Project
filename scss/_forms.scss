@@ -1,0 +1,38 @@
+
+
+input, select, textarea {
+	background: #b2b2b2;
+	border: 0;
+	@include input-placeholder(#000);
+}
+
+
+
+
+// userPane //
+
+.userPane {
+	input {
+		width: 6em;
+		height: 2em;
+		margin: -0.03em 0;
+		padding: 0.5em;
+		@include border-radius(4px);
+	}
+	button {
+		@include border-radius(4px);
+		display: none // I want to make it appear when users complete both USER/PASS fields //
+	}
+	input#search {
+		background: #b2b2b2;
+		width: 10em;
+		&:focus {
+			background: #000;
+			color: #fff;
+			@include input-placeholder(#fff);
+		}
+	}
+	input#login.loginInput {
+		width: 9.5em;
+	}
+}

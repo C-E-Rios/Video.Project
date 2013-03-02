@@ -8,14 +8,28 @@ $ContainerPadding: 2em;
 
 // FONTS //
 
-@mixin font-stack-header { font-family: Helvetica;
-
-	
+@mixin font-stack-header { 
+	font-family: Helvetica;
 }
 
 
 
 
+
+// FORMS //
+
+
+@mixin input-placeholder($color) {
+  &.placeholder {
+    color: $color; 
+  }
+  &:-moz-placeholder {
+    color: $color; 
+  }
+  &::-webkit-input-placeholder {
+    color: $color; 
+  } 
+}
 
 
 // CLEARFIX //

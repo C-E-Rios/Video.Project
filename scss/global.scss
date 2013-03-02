@@ -21,27 +21,34 @@ html {
 
 .headerContainer {
 	padding: 1.5em $ContainerPadding*2 0 $ContainerPadding*2;
-}
-
-
-.logo { 
-	background: url(../images/logo.png) no-repeat;
-	float: left;
-	width: 319px; height: 100px;
-	text-indent: -100%;
-}
-
-.user {
-	float: right;
-	width: 34em; height: 5em;
-	background: #fff;
-	margin: 1em 0 1.5em;
-		.login, .signup { 
+	.logo { 
+		background: url(../images/logo.png) no-repeat;
+		float: left;
+		width: 319px; height: 100px;
+		text-indent: -100%;
+	}
+	.userPane {
+		float: right;
+		width: 34em; height: 4em;
+		background: #fff;
+		margin: 1em 0 1.5em;
+		@include border-radius(4px);
+		.searchContainer, form{ 
 			float: left;
-			padding: 1em;
+			position: relative;
+			padding: 1em 0 0 3.8em;
+			.iconSize {
+				position: absolute;
+				top: 0.2em;
+				left: 0.2em;
+				font-size: 2.7em;
+			}
+		}
+		form {
+			padding-left: 3.4em;
+		}
 	}
 }
-
 
 
 
@@ -52,8 +59,7 @@ html {
 
 nav {
 	background: #fff;
-
-		ul { 
+	ul { 
 		position: relative;
 		border-bottom: 1px dotted #000;
 		margin: 0;
@@ -64,11 +70,10 @@ nav {
 	}
 	ul li { 
 		display: inline;
-
 	}
 }
 
-.icon-size {
+.iconSize {
 	font-size: 2em;
 	padding: 0 0.5em 0 0;
 }
@@ -96,43 +101,37 @@ nav {
 
 
 // SLIDER //
-
-
-article h1 {
-	margin: 0;
-	padding: 0 0 0.4em;
-
-
-}
-
-article figure img {
-	float: left;
-	width: 275px; height: 144px;
-	margin: 0 1em 2em 0;
-}
-
-.post-author {
-	float: left;
+article { 
 	position: relative;
-	background: #000;
-	color: #fff;
-	font-size: 0.7em;
-	width: 55%;
-	padding: 1em 1.4em;
-	margin: 0 0em 0.5em 0; // 11em to make paragraph start in new line. How to fix this? //
-	border-bottom: 4px solid #cf3104;
-	
-	.icon-size {
-		font-size: 4.5em;
-		color: #fff;
+	.iconSize {
+		font-size: 4em;
+		color: #000;
 		position: absolute;
-		top: -9px;
-		right: 0.1em;
+		top: -0.2em;
+		right: -0.3em;
 	}	
-}
-
-article p {
-	margin: 0;
+	h1 {
+		margin: 0;
+		padding: 0 0 0.4em;
+	}
+	figure img {
+		float: left;
+		width: 275px; height: 144px;
+		margin: 0 1em 2em 0;
+	}
+	.post-author {
+		float: left;
+		background: #000;
+		color: #fff;
+		font-size: 0.7em;
+		width: 55%;
+		padding: 1em 1.4em;
+		margin: 0 0 0.5em 0;
+		border-bottom: 4px solid #cf3104;
+	}
+	p {
+		margin: 0;
+	}
 }
 
 
@@ -146,7 +145,6 @@ article p {
 	overflow: hidden;
 	margin: 2em 0;
 }
-
 .mainStory-gallery-img-container {
    float: left;
    position: relative;
@@ -173,13 +171,11 @@ article p {
    text-align: center;
    font-size: 0.8em;
    @include transition(all 0.3s ease-out);
-
 }
 .img-holder:hover .titleBox {
    margin-bottom: 30px;
    background: rgba(0, 0, 0, 0.5);
    opacity: 1;
-
 }
 
 
@@ -190,12 +186,10 @@ article p {
 	background: #fff;
 	padding: 0 $ContainerPadding;
 }
-
 .widget-topusers {
 	float: left;
 	width: 32%;
 }
-
 .widget-topvideos {
 	float: left;
 	width: 68%;
@@ -211,23 +205,23 @@ article p {
 	background: #fff;
 	padding: $ContainerPadding;
 	position: relative;
-		h2.joinUsH2 {
-			width: 80%;
-			border-bottom: 1px dotted #ccc;
-		}
-		span {
-			position: absolute;
-			right: 1.9em;
-			top: 1.15em;
-		}
+	h2.joinUsH2 {
+		width: 80%;
+		border-bottom: 1px dotted #ccc;
+	}
+	span {
+		position: absolute;
+		right: 1.9em;
+		top: 1.15em;
+	}
 }
 
 .post-video h2 {
 	font-size: 1.4em;
-		.icon-size {
-			font-size: 3em;
-			color: #000;
-		}
+	.iconSize {
+		font-size: 3em;
+		color: #000;
+	}
 }
 
 .hideP {
@@ -259,13 +253,11 @@ footer {
 		text-align: center;
 		margin: 0.5em 0 0;
 	}
-
 	.footer-mid {
 		float: left;
 		width: 50%;
 		text-align: center;
 	}
-
 	a.twitter, a.facebook, a.pinterest {
 		width: 40px;
 		height: 40px;

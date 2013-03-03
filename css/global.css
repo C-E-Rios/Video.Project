@@ -374,6 +374,9 @@ a:hover {
 /* ==========================================================================
    Typography
    ========================================================================== */
+p, address, input, select, textarea, h4, h5, h6 {
+  font-family: 'Lato', serif; }
+
 /*
  * Addresses font sizes and margins set differently in IE 6/7.
  * Addresses font sizes within `section` and `article` in Firefox 4+, Safari 5,
@@ -557,7 +560,7 @@ html {
     text-indent: -100%; }
   .headerContainer .userPane {
     float: right;
-    width: 34em;
+    width: 36em;
     height: 4em;
     background: #fff;
     margin: 1em 0 1.5em;
@@ -576,17 +579,20 @@ html {
         left: 0.2em;
         font-size: 2.7em; }
     .headerContainer .userPane form {
-      padding-left: 3.4em; }
+      padding-left: 5em; }
 
 nav {
-  background: #fff; }
+  background: #fff;
+  font-family: 'Josefin Slab', serif; }
   nav ul {
     position: relative;
     border-bottom: 1px dotted #000;
     margin: 0;
     padding: 0.5em 1em 0; }
-  nav ul:nth-child(-n+1) {
-    border-top: 1px dotted #000; }
+  nav ul:nth-child(5) {
+    border-bottom: none; }
+  nav ul:nth-child(1) {
+    background: #aeaeae; }
   nav ul li {
     display: inline; }
 
@@ -594,53 +600,73 @@ nav {
   font-size: 2em;
   padding: 0 0.5em 0 0; }
 
+.home-icon {
+  color: #004077; }
+
 .nav-text a {
   position: absolute;
-  top: 1em; }
+  top: 0.4em;
+  font-size: 1.5em; }
+
+.homeTxt {
+  color: #fff; }
 
 .main-container {
   padding: 0 1.5em; }
   .main-container .mainStory {
     background: #fff;
-    padding: 2em; }
+    padding: 1.5em 2em; }
 
 article {
   position: relative;
-  padding: 0 0 1em 0; }
+  padding: 0 0 1em 0;
+  border-bottom: 1px dotted #ccc; }
   article .iconSize {
     font-size: 4em;
     color: #000;
     position: absolute;
     top: -0.2em;
-    right: -0.3em; }
+    right: -0.6em; }
   article h1 {
+    font-family: 'Amaranth', sans-serif;
+    font-weight: 700;
     margin: 0;
     padding: 0 0 0.4em; }
   article figure img {
     float: left;
     width: 275px;
     height: 189px;
-    margin: 0 1em 0 0; }
+    margin: 0 1em 0 0;
+    border: 1px solid #000;
+    padding: 0.2em;
+    background-color: #000; }
   article .post-author {
     float: left;
     background: #000;
-    color: #fff;
-    font-size: 0.7em;
-    width: 55%;
-    padding: 1em 1.4em;
-    margin: 0 0 0.5em 0;
+    width: 45%;
+    padding: 0.4em 1.4em;
+    margin: 0.4em 0 0 0;
     border-bottom: 4px solid #cf3104;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
     border-radius: 4px; }
+    article .post-author address {
+      color: #fff;
+      font-size: 0.7em;
+      font-style: normal; }
   article p {
-    margin: 0; }
+    margin: 0;
+    padding: 0 0 0.4em 0; }
+    article p:first-letter {
+      font-size: 1.3em; }
+    article p:first-line {
+      font-size: 1.08em; }
 
 .mainStory-gallery {
   overflow: hidden;
-  margin: 1em 0; }
+  margin: 1em 0 0 1em; }
 
 .mainStory-gallery-img-container {
   float: left;
@@ -670,15 +696,14 @@ article {
       color: #fff;
       opacity: 0;
       padding: 0.5em;
-      text-align: center;
-      font-size: 0.8em;
+      font-size: 0.5em;
       -webkit-transition: all 0.3s ease-out;
       -moz-transition: all 0.3s ease-out;
       -o-transition: all 0.3s ease-out;
       transition: all 0.3s ease-out; }
     .mainStory-gallery-img-container .imgHolder:hover figcaption {
       margin-bottom: 1.5em;
-      background: rgba(0, 0, 0, 0.5);
+      background: black;
       opacity: 1; }
 
 .widget {
@@ -698,18 +723,21 @@ article {
   padding: 1em 2em;
   position: relative; }
   .rightSidebar h2.joinUsH2 {
-    width: 80%;
-    border-bottom: 1px dotted #ccc; }
-  .rightSidebar span {
+    width: 90%;
+    border-bottom: 1px dotted #ccc;
+    font-family: 'Amaranth', sans-serif;
+    font-weight: 700; }
+  .rightSidebar .iconSize {
     position: absolute;
-    right: 1.9em;
+    right: 1.4em;
     top: 0.7em; }
 
 .singleLineTxt {
   font-size: 0.8em;
   background: #000;
   color: #fff;
-  padding: 0.4em;
+  padding: 0.3em;
+  width: 90%;
   text-align: center;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -718,13 +746,17 @@ article {
   border-radius: 4px; }
 
 .postVideo h2 {
-  font-size: 1.4em; }
-  .postVideo h2 .iconSize {
-    font-size: 3em;
-    color: #000; }
+  font-size: 1.7em;
+  width: 90%;
+  font-family: 'Amaranth', sans-serif;
+  font-weight: 700;
+  border-bottom: 1px dotted #ccc; }
 
 .postVideo select, input, textarea {
   margin: 0.4em 0; }
+
+footer h3, h4 {
+  font-family: 'Josefin Slab', serif; }
 
 footer {
   width: 100%;
@@ -746,10 +778,14 @@ footer {
     height: 40px;
     display: inline-block;
     background-position: 0 0;
-    -webkit-transition: background-position, 0.2s;
-    -moz-transition: background-position, 0.2s;
-    -o-transition: background-position, 0.2s;
-    transition: background-position, 0.2s; }
+    -webkit-transition-property: background-position;
+    -moz-transition-property: background-position;
+    -o-transition-property: background-position;
+    transition-property: background-position;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    transition-duration: 0.2s; }
   footer a.twitter {
     background: url("../images/social-twitter.png") no-repeat; }
   footer a.facebook {

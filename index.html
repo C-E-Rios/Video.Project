@@ -5,8 +5,9 @@
 		<title>CHWz.it</title>
 		<meta name="description" content="Today's trending videos">
 		<link rel="stylesheet" href="css/global.css">
+		<link href='http://fonts.googleapis.com/css?family=Lato:300|Amaranth:700|Josefin+Slab:600' rel='stylesheet' type='text/css'>
 	</head>
-	<body>
+	<body class="home">
 		<header>
 			<div class="headerContainer group">
 				<div class="logo">CHWz.it</div>
@@ -29,7 +30,7 @@
 					<nav class="leftSidebarContainer">
 						<ul>
 					    <li><span class="iconSize home-icon" data-icon="&#xe001;"></span></li>
-					    <li class="nav-text"><a href="#">Home</a></li>
+					    <li class="nav-text"><a class="homeTxt" href="#home">Home</a></li>
 					  </ul>
 						<ul>						    
 					    <li><span class="iconSize peculiar-icon" data-icon="&#xe002;"></span></li>
@@ -51,52 +52,52 @@
 				</div>
 				<div class="main-container grid-2-3">
 					<div class="mainStory">
-						<article>
+						<article class="group">
 							<span class="iconSize news-icon" data-icon="&#xe003;"></span>
 							<h1>Meteor Strikes Russia</h1>
 							<figure>
 								<img src="images/rus-meteor.png" alt="Russian Meteor"/>
 							</figure>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
 							<div class="post-author">
 								<address>Shared by SpiderManx1. 15th Jan, 2013.</address>
 							</div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
 						</article>
 						<div class="mainStory-gallery">
 							<div class="mainStory-gallery-img-container">
 							  <div class="imgHolder">
 							    <img src="images/ch-locker-bedroom.png" />
-							    <figcaption><h3>The image title text</h3></figcaption>
+							    <figcaption><h3>Bedroom lockers</h3></figcaption>
 							  </div>
 							</div>
 							<div class="mainStory-gallery-img-container">
 							  <div class="imgHolder">
 							    <img src="images/redbull-skydive.png" />
-							    <figcaption><h3>The image title text</h3></figcaption>
+							    <figcaption><h3>24 Mile Sky Dive</h3></figcaption>
 							  </div>
 							</div>
 							<div class="mainStory-gallery-img-container">
 							  <div class="imgHolder">
 							    <img src="images/rt-politics.png" />
-							    <figcaption><h3>The image title text</h3></figcaption>
+							    <figcaption><h3>Bradley Manning to Receive Life in Prison</h3></figcaption>
 							  </div>
 							</div>
 							<div class="mainStory-gallery-img-container">
 							  <div class="imgHolder">
 							    <img src="images/uk-amir-khan.png" />
-							    <figcaption><h3>The image title text</h3></figcaption>
+							    <figcaption><h3>Amir’s attackers on what happened…</h3></figcaption>
 							  </div>
 							</div>
 							<div class="mainStory-gallery-img-container">
 							  <div class="imgHolder">
 							    <img src="images/uk-kendra.png" />
-							    <figcaption><h3>The image title text</h3></figcaption>
+							    <figcaption><h3>Kendra Morris – Pow</h3></figcaption>
 							  </div>
 							</div>
 							<div class="mainStory-gallery-img-container">
 							  <div class="imgHolder">
 							    <img src="images/us-dr-dre-snoop-dogg.png" />
-							    <figcaption><h3>The image title text</h3></figcaption>
+							    <figcaption><h3>Dr. Dre & Snoop Dogg - PSA</h3></figcaption>
 							  </div>
 							</div>
 						</div>
@@ -120,14 +121,13 @@
 					<div class="rightSidebar">
 						<a href="#">
 							<h2 class="joinUsH2">Join us?</h2>
-							<span class="iconSize home-icon" data-icon="&#xe0006;"></span>
+							<span class="iconSize" data-icon="&#xe0006;"></span>
 						</a>
-							<!-- Show/Hide with jQuery? 
+						<!-- Form reveals iteself when users click on the above -->
 							<p>Contribute anonymously, or tell us your name and e-mail address to post as yourself.</p>
-							-->	
-						<p class="singleLineTxt">You don't have to join to contribute.</p>
 						<div class="postVideo">
 							<h2>Post New Video</h2>
+							<p class="singleLineTxt">You don't have to join to contribute.</p>
 							<form action="#">
 							  	<select name="userName" id="userName">
 							  		<option value="Log-In">Log-in</option>

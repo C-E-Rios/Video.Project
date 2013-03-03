@@ -9,12 +9,17 @@ $ContainerPadding: 2em;
 // FONTS //
 
 @mixin font-stack-header { 
-	font-family: Helvetica;
+	font-family: 'Amaranth', sans-serif;
+	font-weight: 700;
 }
 
+@mixin font-stack-normalTxt {
+	font-family: 'Lato', serif;
+}
 
-
-
+@mixin font-stack-thinTxt {
+	font-family: 'Josefin Slab', serif;
+}
 
 // FORMS //
 

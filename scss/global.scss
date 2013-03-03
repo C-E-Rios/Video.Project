@@ -16,9 +16,6 @@ html {
 
 
 
-
-
-
 // HEADER //
 
 .headerContainer {
@@ -31,7 +28,7 @@ html {
 	}
 	.userPane {
 		float: right;
-		width: 34em; height: 4em;
+		width: 36em; height: 4em;
 		background: #fff;
 		margin: 1em 0 1.5em;
 		@include border-radius(4px);
@@ -47,7 +44,7 @@ html {
 			}
 		}
 		form {
-			padding-left: 3.4em;
+			padding-left: 5em;
 		}
 	}
 }
@@ -61,30 +58,39 @@ html {
 
 nav {
 	background: #fff;
+	@include font-stack-thinTxt;
 	ul { 
 		position: relative;
 		border-bottom: 1px dotted #000;
 		margin: 0;
 		padding: 0.5em 1em 0;
 	}
-	ul:nth-child(-n+1) {
-		border-top: 1px dotted #000;
+	ul:nth-child(5) {
+		border-bottom: none;
+	}
+	ul:nth-child(1) {
+		background: #aeaeae;
 	}
 	ul li { 
 		display: inline;
 	}
 }
-
 .iconSize {
 	font-size: 2em;
 	padding: 0 0.5em 0 0;
 }
-
+.home-icon {
+	color: #004077;
+}
 .nav-text a {
 	position: absolute;
-	top: 1em;
+	top: 0.4em;
+	font-size: 1.5em;
 }
 
+.homeTxt {
+	color: #fff;
+}
 
 
 
@@ -94,7 +100,7 @@ nav {
 	padding: 0 1.5em;
 	.mainStory {
 		background: #fff;
-		padding: $ContainerPadding;
+		padding: 1.5em $ContainerPadding;
 	}
 }
 
@@ -106,15 +112,16 @@ nav {
 article { 
 	position: relative;
 	padding: 0 0 1em 0;
-
+	border-bottom: 1px dotted #ccc;
 	.iconSize {
 		font-size: 4em;
 		color: #000;
 		position: absolute;
 		top: -0.2em;
-		right: -0.3em;
+		right: -0.6em;
 	}	
 	h1 {
+		@include font-stack-header;
 		margin: 0;
 		padding: 0 0 0.4em;
 	}
@@ -122,29 +129,43 @@ article {
 		float: left;
 		width: 275px; height: 189px;
 		margin: 0 1em 0 0;
-	}
+		border: 1px solid #000;
+		padding: 0.2em;
+		background-color: #000;
+		}
 	.post-author {
 		float: left;
 		background: #000;
-		color: #fff;
-		font-size: 0.7em;
-		width: 55%;
-		padding: 1em 1.4em;
-		margin: 0 0 0.5em 0;
+		width: 45%;
+		padding: 0.4em 1.4em;
+		margin: 0.4em 0 0 0;
 		border-bottom: 4px solid #cf3104;
 		@include border-radius(4px);
+		address {
+			color: #fff;
+			font-size: 0.7em;
+			font-style: normal;
+		}
 	}
 	p {
 		margin: 0;
+		padding: 0 0 0.4em 0;
+		&:first-letter {
+			font-size: 1.3em;
+		}
+		&:first-line {
+			font-size: 1.08em;
+		} 
 	}
 }
+
 
 
 // GALLERY //
 
 .mainStory-gallery {
 	overflow: hidden;
-	margin: 1em 0;
+	margin: 1em 0 0 1em;
 }
 .mainStory-gallery-img-container {
   float: left;
@@ -170,13 +191,12 @@ article {
 		  color: #fff;
 		  opacity: 0;
 		  padding: 0.5em;
-		  text-align: center;
-		  font-size: 0.8em;
+		  font-size: 0.5em;
 		  @include transition(all 0.3s ease-out);
 		}
 		&:hover figcaption {
 		  margin-bottom: 1.5em;
-		  background: rgba(0, 0, 0, 0.5);
+		  background: rgba(0, 0, 0, 1);
 		  opacity: 1;
 		}
 	}	
@@ -191,6 +211,7 @@ article {
 .widget { 
 	background: #fff;
 	padding: 0 $ContainerPadding;
+	
 }
 .widget-topusers {
 	float: left;
@@ -212,12 +233,13 @@ article {
 	padding: 1em $ContainerPadding;
 	position: relative;
 	h2.joinUsH2 {
-		width: 80%;
+		width: 90%;
 		border-bottom: 1px dotted #ccc;
+		@include font-stack-header;
 	}
-	span {
+	.iconSize {
 		position: absolute;
-		right: 1.9em;
+		right: 1.4em;
 		top: 0.7em;
 	}
 }
@@ -225,16 +247,17 @@ article {
 	font-size: 0.8em;
 	background: #000;
 	color: #fff;
-	padding: 0.4em;
+	padding: 0.3em;
+	width: 90%;
 	text-align: center;
 	@include border-radius(4px);
 }
 .postVideo h2 {
-	font-size: 1.4em;
-	.iconSize {
-		font-size: 3em;
-		color: #000;
-	}
+	font-size: 1.7em;
+	width: 90%;
+	@include font-stack-header;
+	border-bottom: 1px dotted #ccc;
+
 }
 .postVideo select, input, textarea {
 	margin: 0.4em 0;
@@ -247,6 +270,9 @@ article {
 
 // FOOTER //
 
+footer h3, h4 {
+		@include font-stack-thinTxt;
+}
 
 footer {
 	width: 100%;
@@ -271,7 +297,8 @@ footer {
 		height: 40px;
 		display: inline-block;
 		background-position: 0 0;
-		@include transition (background-position, .2s)
+		@include transition-property(background-position);
+  	@include transition-duration(0.2s);
 	}
 	a.twitter {
 		background: url('../images/social-twitter.png') no-repeat;

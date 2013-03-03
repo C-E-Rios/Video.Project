@@ -6,7 +6,7 @@
  * Addresses `outline` inconsistency between Chrome and other browsers.
  */
 a { 
-    text-decoration:none;
+    text-decoration: none;
     color: #000; /*Carlos*/
 }
 a:focus {
@@ -26,6 +26,14 @@ a:hover {
 /* ==========================================================================
    Typography
    ========================================================================== */
+
+
+// CARLOS ADDITIONS //
+
+p, address, input, select, textarea, h4, h5, h6 { 
+    @include font-stack-normalTxt;
+}
+
 
 /*
  * Addresses font sizes and margins set differently in IE 6/7.

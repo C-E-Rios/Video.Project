@@ -299,16 +299,17 @@ table {
   clear: both; }
 
 input, select, textarea {
-  background: #b2b2b2;
-  border: 0; }
-  input.placeholder, select.placeholder, textarea.placeholder {
-    color: black; }
-  input:-moz-placeholder, select:-moz-placeholder, textarea:-moz-placeholder {
-    color: black; }
-  input::-webkit-input-placeholder, select::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-    color: black; }
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #ccc; }
 
 .userPane input {
+  background: #000;
+  border: 0;
+  color: #fff;
   width: 6em;
   height: 2em;
   margin: -0.03em 0;
@@ -318,6 +319,12 @@ input, select, textarea {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px; }
+  .userPane input.placeholder {
+    color: white; }
+  .userPane input::-moz-placeholder {
+    color: white; }
+  .userPane input::-webkit-input-placeholder {
+    color: white; }
 .userPane button {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -326,19 +333,20 @@ input, select, textarea {
   border-radius: 4px;
   display: none; }
 .userPane input#search {
-  background: #b2b2b2;
+  background: #000;
   width: 10em; }
-  .userPane input#search:focus {
-    background: #000;
-    color: #fff; }
-    .userPane input#search:focus.placeholder {
-      color: white; }
-    .userPane input#search:focus:-moz-placeholder {
-      color: white; }
-    .userPane input#search:focus::-webkit-input-placeholder {
-      color: white; }
 .userPane input#login.loginInput {
   width: 9.5em; }
+
+.postVideo select {
+  width: 60%;
+  color: #a9a9a9; }
+.postVideo textarea, .postVideo input {
+  width: 80%;
+  padding: 0.3em 0.5em; }
+.postVideo textarea {
+  height: 4em;
+  resize: none; }
 
 /* ==========================================================================
    Links
@@ -597,7 +605,8 @@ nav {
     padding: 2em; }
 
 article {
-  position: relative; }
+  position: relative;
+  padding: 0 0 1em 0; }
   article .iconSize {
     font-size: 4em;
     color: #000;
@@ -610,8 +619,8 @@ article {
   article figure img {
     float: left;
     width: 275px;
-    height: 144px;
-    margin: 0 1em 2em 0; }
+    height: 189px;
+    margin: 0 1em 0 0; }
   article .post-author {
     float: left;
     background: #000;
@@ -620,48 +629,57 @@ article {
     width: 55%;
     padding: 1em 1.4em;
     margin: 0 0 0.5em 0;
-    border-bottom: 4px solid #cf3104; }
+    border-bottom: 4px solid #cf3104;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px; }
   article p {
     margin: 0; }
 
 .mainStory-gallery {
   overflow: hidden;
-  margin: 2em 0; }
+  margin: 1em 0; }
 
 .mainStory-gallery-img-container {
   float: left;
   position: relative;
   width: 33%;
   padding-bottom: 20%; }
-
-.img-holder {
-  position: absolute;
-  overflow: hidden; }
-
-.img-holder img {
-  width: 100%; }
-
-.img-holder .titleBox {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin-bottom: 0px;
-  background: none;
-  color: #fff;
-  opacity: 0;
-  padding: 8px;
-  text-align: center;
-  font-size: 0.8em;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out; }
-
-.img-holder:hover .titleBox {
-  margin-bottom: 30px;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 1; }
+  .mainStory-gallery-img-container .imgHolder {
+    position: absolute;
+    overflow: hidden;
+    width: 206px;
+    height: 116px; }
+    .mainStory-gallery-img-container .imgHolder img {
+      width: 212px;
+      height: 122px;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+    .mainStory-gallery-img-container .imgHolder:hover img {
+      width: 206px;
+      height: 116px; }
+    .mainStory-gallery-img-container .imgHolder figcaption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      color: #fff;
+      opacity: 0;
+      padding: 0.5em;
+      text-align: center;
+      font-size: 0.8em;
+      -webkit-transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      -o-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out; }
+    .mainStory-gallery-img-container .imgHolder:hover figcaption {
+      margin-bottom: 1.5em;
+      background: rgba(0, 0, 0, 0.5);
+      opacity: 1; }
 
 .widget {
   background: #fff;
@@ -677,7 +695,7 @@ article {
 
 .rightSidebar {
   background: #fff;
-  padding: 2em;
+  padding: 1em 2em;
   position: relative; }
   .rightSidebar h2.joinUsH2 {
     width: 80%;
@@ -685,18 +703,27 @@ article {
   .rightSidebar span {
     position: absolute;
     right: 1.9em;
-    top: 1.15em; }
+    top: 0.7em; }
 
-.post-video h2 {
+.singleLineTxt {
+  font-size: 0.8em;
+  background: #000;
+  color: #fff;
+  padding: 0.4em;
+  text-align: center;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px; }
+
+.postVideo h2 {
   font-size: 1.4em; }
-  .post-video h2 .iconSize {
+  .postVideo h2 .iconSize {
     font-size: 3em;
     color: #000; }
 
-.hideP {
-  display: none; }
-
-.post-video select, input, textarea {
+.postVideo select, input, textarea {
   margin: 0.4em 0; }
 
 footer {
@@ -719,14 +746,10 @@ footer {
     height: 40px;
     display: inline-block;
     background-position: 0 0;
-    -webkit-transition-property: background-position;
-    -moz-transition-property: background-position;
-    -o-transition-property: background-position;
-    transition-property: background-position;
-    -webkit-transition-duration: .2s;
-    -moz-transition-duration: .2s;
-    -o-transition-duration: .2s;
-    transition-duration: .2s; }
+    -webkit-transition: background-position, 0.2s;
+    -moz-transition: background-position, 0.2s;
+    -o-transition: background-position, 0.2s;
+    transition: background-position, 0.2s; }
   footer a.twitter {
     background: url("../images/social-twitter.png") no-repeat; }
   footer a.facebook {

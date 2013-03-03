@@ -17,6 +17,8 @@ html {
 
 
 
+
+
 // HEADER //
 
 .headerContainer {
@@ -33,7 +35,7 @@ html {
 		background: #fff;
 		margin: 1em 0 1.5em;
 		@include border-radius(4px);
-		.searchContainer, form{ 
+		.searchContainer, form { 
 			float: left;
 			position: relative;
 			padding: 1em 0 0 3.8em;
@@ -99,10 +101,12 @@ nav {
 
 
 
+// MAIN CONTENT //
 
-// SLIDER //
 article { 
 	position: relative;
+	padding: 0 0 1em 0;
+
 	.iconSize {
 		font-size: 4em;
 		color: #000;
@@ -116,8 +120,8 @@ article {
 	}
 	figure img {
 		float: left;
-		width: 275px; height: 144px;
-		margin: 0 1em 2em 0;
+		width: 275px; height: 189px;
+		margin: 0 1em 0 0;
 	}
 	.post-author {
 		float: left;
@@ -128,6 +132,7 @@ article {
 		padding: 1em 1.4em;
 		margin: 0 0 0.5em 0;
 		border-bottom: 4px solid #cf3104;
+		@include border-radius(4px);
 	}
 	p {
 		margin: 0;
@@ -135,48 +140,49 @@ article {
 }
 
 
-
-
-
-
 // GALLERY //
 
 .mainStory-gallery {
 	overflow: hidden;
-	margin: 2em 0;
+	margin: 1em 0;
 }
 .mainStory-gallery-img-container {
-   float: left;
-   position: relative;
-   width: 33%;
-   padding-bottom: 20%;
+  float: left;
+  position: relative;
+  width: 33%;
+  padding-bottom: 20%;
+	.imgHolder {
+	  position: absolute;
+	  overflow: hidden;
+	  width: 206px; height: 116px;
+		img {
+			width: 212px; height: 122px;
+			@include transition(all 0.3s ease-in-out);
+		}
+		&:hover img {
+			width: 206px; height: 116px;
+		}
+		figcaption {
+		  position: absolute;
+		  bottom: 0;
+		  left: 0;
+		  right: 0;
+		  color: #fff;
+		  opacity: 0;
+		  padding: 0.5em;
+		  text-align: center;
+		  font-size: 0.8em;
+		  @include transition(all 0.3s ease-out);
+		}
+		&:hover figcaption {
+		  margin-bottom: 1.5em;
+		  background: rgba(0, 0, 0, 0.5);
+		  opacity: 1;
+		}
+	}	
 }
-.img-holder {
-   position: absolute;
-   overflow: hidden;
-}
-.img-holder img {
-   width: 100%;
-}
-.img-holder .titleBox {
-   position: absolute;
-   bottom: 0;
-   left: 0;
-   right: 0;
-   margin-bottom: 0px;
-   background: none;
-   color: #fff;
-   opacity: 0;
-   padding: 8px;
-   text-align: center;
-   font-size: 0.8em;
-   @include transition(all 0.3s ease-out);
-}
-.img-holder:hover .titleBox {
-   margin-bottom: 30px;
-   background: rgba(0, 0, 0, 0.5);
-   opacity: 1;
-}
+
+
 
 
 
@@ -203,7 +209,7 @@ article {
 
 .rightSidebar {
 	background: #fff;
-	padding: $ContainerPadding;
+	padding: 1em $ContainerPadding;
 	position: relative;
 	h2.joinUsH2 {
 		width: 80%;
@@ -212,23 +218,25 @@ article {
 	span {
 		position: absolute;
 		right: 1.9em;
-		top: 1.15em;
+		top: 0.7em;
 	}
 }
-
-.post-video h2 {
+.singleLineTxt {
+	font-size: 0.8em;
+	background: #000;
+	color: #fff;
+	padding: 0.4em;
+	text-align: center;
+	@include border-radius(4px);
+}
+.postVideo h2 {
 	font-size: 1.4em;
 	.iconSize {
 		font-size: 3em;
 		color: #000;
 	}
 }
-
-.hideP {
-	display: none;
-}
-
-.post-video select, input, textarea {
+.postVideo select, input, textarea {
 	margin: 0.4em 0;
 }
 
@@ -263,14 +271,7 @@ footer {
 		height: 40px;
 		display: inline-block;
 		background-position: 0 0;
-		-webkit-transition-property: background-position;
-		-moz-transition-property: background-position;
-		-o-transition-property: background-position;
-		transition-property: background-position;
-		-webkit-transition-duration: .2s;
-		-moz-transition-duration: .2s;
-		-o-transition-duration: .2s;
-		transition-duration: .2s;
+		@include transition (background-position, .2s)
 	}
 	a.twitter {
 		background: url('../images/social-twitter.png') no-repeat;

@@ -23,7 +23,7 @@ $ContainerPadding: 2em;
   &.placeholder {
     color: $color; 
   }
-  &:-moz-placeholder {
+  &::-moz-placeholder {
     color: $color; 
   }
   &::-webkit-input-placeholder {

@@ -547,14 +547,14 @@ sub {
   float: left; }
 
 html {
-  background: url("../images/bgBrokenNoise.png") repeat;
+  background: url("../images/theme/bgBrokenNoise.png") repeat;
   height: 100%; }
 
 .headerContainer {
   padding: 1.5em 4em 0 4em; }
 
 .logo {
-  background: url(../images/logo.png) no-repeat;
+  background: url(../images/theme/logo.png) no-repeat;
   float: left;
   width: 319px;
   height: 100px;
@@ -912,17 +912,17 @@ footer {
     -o-transition-duration: 0.2s;
     transition-duration: 0.2s; }
   footer a.twitter {
-    background: url("../images/social-twitter.png") no-repeat; }
+    background: url("../images/theme/social-twitter.png") no-repeat; }
   footer a.facebook {
-    background: url("../images/social-facebook.png") no-repeat; }
+    background: url("../images/theme/social-facebook.png") no-repeat; }
   footer a.pinterest {
-    background: url("../images/social-pinterest.png") no-repeat; }
+    background: url("../images/theme/social-pinterest.png") no-repeat; }
   footer a.twitter:hover {
-    background: url("../images/social-twitter.png") 100% 0 no-repeat;
+    background: url("../images/theme/social-twitter.png") 100% 0 no-repeat;
     background-position: 0 100%; }
   footer a.facebook:hover {
-    background: url("../images/social-facebook.png") 100% 0 no-repeat;
+    background: url("../images/theme/social-facebook.png") 100% 0 no-repeat;
     background-position: 0 100%; }
   footer a.pinterest:hover {
-    background: url("../images/social-pinterest.png") 100% 0 no-repeat;
+    background: url("../images/theme/social-pinterest.png") 100% 0 no-repeat;
     background-position: 0 100%; }

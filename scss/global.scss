@@ -20,32 +20,32 @@ html {
 
 .headerContainer {
 	padding: 1.5em $ContainerPadding*2 0 $ContainerPadding*2;
-	.logo { 
-		background: url(../images/logo.png) no-repeat;
+}
+.logo { 
+	background: url(../images/logo.png) no-repeat;
+	float: left;
+	width: 319px; height: 100px;
+	text-indent: -100%;
+}
+.userPane {
+	float: right;
+	width: 36em; height: 4em;
+	background: #fff;
+	margin: 1em 0 1.5em;
+	@include border-radius(4px);
+	.searchContainer, form { 
 		float: left;
-		width: 319px; height: 100px;
-		text-indent: -100%;
-	}
-	.userPane {
-		float: right;
-		width: 36em; height: 4em;
-		background: #fff;
-		margin: 1em 0 1.5em;
-		@include border-radius(4px);
-		.searchContainer, form { 
-			float: left;
-			position: relative;
-			padding: 1em 0 0 3.8em;
+		position: relative;
+		padding: 1em 0 0 3.8em;
 			.iconSize {
 				position: absolute;
 				top: 0.2em;
 				left: 0.2em;
 				font-size: 2.7em;
 			}
-		}
-		form {
-			padding-left: 5em;
-		}
+	}
+	form {
+		padding-left: 5em;		
 	}
 }
 
@@ -100,7 +100,7 @@ nav {
 	padding: 0 1.5em;
 	.mainStory {
 		background: #fff;
-		padding: 1.5em $ContainerPadding;
+		padding: 1em $ContainerPadding;
 	}
 }
 
@@ -150,11 +150,9 @@ article {
 	p {
 		margin: 0;
 		padding: 0 0 0.4em 0;
+		width: 96%;
 		&:first-letter {
 			font-size: 1.3em;
-		}
-		&:first-line {
-			font-size: 1.08em;
 		} 
 	}
 }
@@ -163,6 +161,10 @@ article {
 
 // GALLERY //
 
+.mainStory-galleryContainer {
+	padding: 0 0 0.2em 0;
+	border-bottom: 1px dotted #ccc;
+}
 .mainStory-gallery {
 	overflow: hidden;
 	margin: 1em 0 0 1em;
@@ -190,14 +192,28 @@ article {
 		  right: 0;
 		  color: #fff;
 		  opacity: 0;
-		  padding: 0.5em;
 		  font-size: 0.5em;
+		  margin: 0 0 -2em;
 		  @include transition(all 0.3s ease-out);
 		}
 		&:hover figcaption {
-		  margin-bottom: 1.5em;
+			margin: 0 0 0;
 		  background: rgba(0, 0, 0, 1);
 		  opacity: 1;
+		}
+		h3 {
+			padding: 0.4em 0.4em 0;
+			line-height: 1.3;
+		}
+		.imgHolderStats {
+			text-align: right;
+			padding: 0.5em 0 0.3em 0;
+		}
+		.iconSize {
+			padding: 0 0.1em 0 0.3em;
+		}
+		.statsNumber {
+			padding: 0 0.5em 0 0;
 		}
 	}	
 }
@@ -209,18 +225,124 @@ article {
 // WIDGETS //
 
 .widget { 
+	@include font-stack-normalTxt;
 	background: #fff;
-	padding: 0 $ContainerPadding;
-	
+	padding: 0 $ContainerPadding $ContainerPadding;
+	border-bottom: 1px dotted #ccc;
 }
-.widget-topusers {
+.widget-topUsers h2, .widget-topComments h2 {
+	padding: 0 0 0.4em 0;
+	font-size: 1.9em;
+	@include font-stack-header;
+}
+.widget-topUsers {
 	float: left;
-	width: 32%;
+	width: 50%;
+	table { 
+	  width: 85%;
+	  table-layout: auto; 
+	}
+	th:nth-child(1) {
+		@include border-left-radius(4px);
+		text-align: left;
+		padding: 0 0 0 1em;
+	}
+	th:nth-child(4) {
+		@include border-right-radius(4px);
+	}
+	th { 
+	  background: #000; 
+	  color: white; 
+	  font-weight: bold;
+	  .iconSize {
+	  	color: #ec5d29;
+	  	font-size: 1.5em;
+	  	padding: 0 0 0 0.1em;
+	  }
+	}
+	td, th { 
+	  padding: 6px; 
+	  border: 0px solid #ccc; 
+	  text-align: center;
+	}
+	td:nth-child(1) {
+		text-align: left;
+		padding: 0 0 0 1em;
+	}	
+	td a {
+		background: #fff;
+		padding: 0 0.4em;
+		@include border-radius(4px);
+		&:hover {
+			background: #444;
+			color: #fff;
+		}
+	}
+	tbody tr {
+		td:nth-child(1) {
+			@include border-left-radius(4px);
+		}
+		td:nth-child(4) {
+			@include border-right-radius(4px);
+		}
+		&:hover {
+			background: #ccc;
+		}
+	}
 }
-.widget-topvideos {
-	float: left;
-	width: 68%;
+
+.widget-topComments {
+	padding: 0 0 1.4em 0;
+	border-bottom: 1px dotted #ccc;
+	h2 {
+		text-align: right;
+	}
+	table {
+		font-size: 0.70em;
+		table-layout: fixed;
+	}
+	td {
+		padding: 0 0.5em;
+		text-align: right;
+		height: 1em;
+	}
+	td img { 
+		width: 70px; height: 50px;
+		border: 3px solid #000;
+		@include border-radius(4px);
+	}
+	td.commentTd {
+		font-size: 1.15em;
+		color: #fff;
+		padding: 0.8em 0 0;
+		a, span {
+			float: right;
+		}
+		a {
+			display: inline-block;
+			background: #000;
+			color: #fff;
+			padding: 0.4em;
+			@include border-radius(4px);
+			&:hover {
+				background: #444;
+			}
+		}
+		.widerComment {
+			width: 90%;
+			}
+		span {
+			color: #000;
+			margin: 0.1em 0 0.4em;
+		}
+	}
 }
+
+// .widerComment {  //Add to longer comments
+// 	width: 95%;
+// }
+
+
 
 
 

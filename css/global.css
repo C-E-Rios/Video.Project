@@ -735,7 +735,7 @@ article {
 
 .widget-topUsers {
   float: left;
-  width: 50%; }
+  width: 40%; }
   .widget-topUsers table {
     width: 85%;
     table-layout: auto; }
@@ -804,12 +804,11 @@ article {
   .widget-topComments h2 {
     text-align: right; }
   .widget-topComments table {
-    font-size: 0.70em;
+    font-size: 0.7em;
     table-layout: fixed; }
   .widget-topComments td {
     padding: 0 0.5em;
-    text-align: right;
-    height: 1em; }
+    text-align: right; }
   .widget-topComments td img {
     width: 70px;
     height: 50px;
@@ -820,7 +819,7 @@ article {
     -o-border-radius: 4px;
     border-radius: 4px; }
   .widget-topComments td.commentTd {
-    font-size: 1.15em;
+    font-size: 1.45em;
     color: #fff;
     padding: 0.8em 0 0; }
     .widget-topComments td.commentTd a, .widget-topComments td.commentTd span {
@@ -838,7 +837,7 @@ article {
       .widget-topComments td.commentTd a:hover {
         background: #444; }
     .widget-topComments td.commentTd .widerComment {
-      width: 90%; }
+      width: 85%; }
     .widget-topComments td.commentTd span {
       color: #000;
       margin: 0.1em 0 0.4em; }

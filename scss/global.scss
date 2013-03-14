@@ -29,23 +29,23 @@ html {
 }
 .userPane {
 	float: right;
-	width: 36em; height: 4em;
+	width: 36.8em; height: 4em;
 	background: #fff;
 	margin: 1em 0 1.5em;
 	@include border-radius(4px);
-	.searchContainer, form { 
+	.searchContainer, .loginForm { 
 		float: left;
 		position: relative;
 		padding: 1em 0 0 3.8em;
-			.iconSize {
-				position: absolute;
-				top: 0.2em;
-				left: 0.2em;
-				font-size: 2.7em;
-			}
+		.iconSize {
+			position: absolute;
+			top: 0.2em;
+			left: 0.2em;
+			font-size: 2.7em;
+		}
 	}
-	form {
-		padding-left: 5em;		
+	.loginForm {
+		padding-left: 2.6em;		
 	}
 }
 
@@ -128,11 +128,12 @@ article {
 	figure img {
 		float: left;
 		width: 275px; height: 189px;
+		@include border-radius(8px);
 		margin: 0 1em 0 0;
 		border: 1px solid #000;
 		padding: 0.2em;
 		background-color: #000;
-		}
+	}
 	.post-author {
 		float: left;
 		background: #000;
@@ -170,14 +171,15 @@ article {
 	margin: 1em 0 0 1em;
 }
 .mainStory-gallery-img-container {
-  float: left;
-  position: relative;
-  width: 33%;
-  padding-bottom: 20%;
+	float: left;
+	position: relative;
+	width: 33%;
+	padding-bottom: 20%;
 	.imgHolder {
-	  position: absolute;
-	  overflow: hidden;
-	  width: 206px; height: 116px;
+		position: absolute;
+		overflow: hidden;
+		width: 206px; height: 116px;
+		@include border-radius(8px);
 		img {
 			width: 212px; height: 122px;
 			@include transition(all 0.3s ease-in-out);
@@ -186,20 +188,21 @@ article {
 			width: 206px; height: 116px;
 		}
 		figcaption {
-		  position: absolute;
-		  bottom: 0;
-		  left: 0;
-		  right: 0;
-		  color: #fff;
-		  opacity: 0;
-		  font-size: 0.5em;
-		  margin: 0 0 -2em;
-		  @include transition(all 0.3s ease-out);
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			color: #fff;
+			opacity: 0;
+			font-size: 0.5em;
+			margin: 0 0 -2em;
+			@include transition(all 0.3s ease-out);
 		}
 		&:hover figcaption {
 			margin: 0 0 0;
-		  background: rgba(0, 0, 0, 1);
-		  opacity: 1;
+			background: rgba(0, 0, 0, 1);
+			@include border-bottom-radius(8px);
+			opacity: 1;
 		}
 		h3 {
 			padding: 0.4em 0.4em 0;
@@ -239,8 +242,8 @@ article {
 	float: left;
 	width: 40%;
 	table { 
-	  width: 85%;
-	  table-layout: auto; 
+		width: 85%;
+		table-layout: auto;
 	}
 	th:nth-child(1) {
 		@include border-left-radius(4px);
@@ -251,19 +254,19 @@ article {
 		@include border-right-radius(4px);
 	}
 	th { 
-	  background: #000; 
-	  color: white; 
-	  font-weight: bold;
-	  .iconSize {
-	  	color: #ec5d29;
-	  	font-size: 1.5em;
-	  	padding: 0 0 0 0.1em;
-	  }
+		background: #000; 
+		color: white; 
+		font-weight: bold;
+		.iconSize {
+			color: #ec5d29;
+			font-size: 1.5em;
+			padding: 0 0 0 0.1em;
+		}
 	}
 	td, th { 
-	  padding: 6px; 
-	  border: 0px solid #ccc; 
-	  text-align: center;
+		padding: 6px; 
+		border: 0px solid #ccc; 
+		text-align: center;
 	}
 	td:nth-child(1) {
 		text-align: left;
@@ -293,12 +296,12 @@ article {
 
 .widget-topComments {
 	padding: 0 0 1.4em 0;
+	font-size: 0.7em;
 	border-bottom: 1px dotted #ccc;
 	h2 {
 		text-align: right;
 	}
 	table {
-		font-size: 0.7em;
 		table-layout: fixed;
 	}
 	td {
@@ -311,9 +314,10 @@ article {
 		@include border-radius(4px);
 	}
 	td.commentTd {
-		font-size: 1.45em;
+		font-size: 1.3em;
+		text-align: center;
 		color: #fff;
-		padding: 0.8em 0 0;
+		padding: 0.8em 0.8em 0;
 		a, span {
 			float: right;
 		}
@@ -329,10 +333,12 @@ article {
 		}
 		.widerComment {
 			width: 85%;
-			}
+		}
 		span {
 			color: #000;
 			margin: 0.1em 0 0.4em;
+			font-size: 0.8em;
+			padding: 0 1em;
 		}
 	}
 }
@@ -392,7 +398,7 @@ article {
 // FOOTER //
 
 footer h3, h4 {
-		@include font-stack-thinTxt;
+	@include font-stack-thinTxt;
 }
 
 footer {
@@ -419,7 +425,7 @@ footer {
 		display: inline-block;
 		background-position: 0 0;
 		@include transition-property(background-position);
-  	@include transition-duration(0.2s);
+		@include transition-duration(0.2s);
 	}
 	a.twitter {
 		background: url('../images/theme/social-twitter.png') no-repeat;

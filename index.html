@@ -14,13 +14,18 @@
 				<div class="userPane group">
 			    <div class="searchContainer">
 						<span class="iconSize search-icon" data-icon="&#xe007;"></span>
-				    <input type="text" name="search" id="search" placeholder="Search">
+				    <form class="searchForm">
+				    	<input type="text" name="search" id="searchInput" placeholder="Search">
+				    	<button type="submit" class="goSearch">Go</button>
+				    </form>
 					</div>
-					<form method="post" action="index.html" class="login">
-			      <input type="text" name="login" id="login" class="loginInput" placeholder="Username / e-mail">
-			      <input type="password" name="password" id="password" placeholder="Password">
-			      <button type="submit" class="login-button">Login</button>
-			 		</form>
+					<div class="loginContainer">
+						<form method="post" action="index.html" class="loginForm">
+				      <input type="text" name="login" id="login" class="loginInput" placeholder="UserName / e-mail">
+				      <input type="password" name="password" id="password" placeholder="Password">
+				      <button type="submit" class="loginButton">Login</button>
+				 		</form>
+				 	</div>
 				</div>
 			</div>
 		</header>
@@ -68,37 +73,37 @@
 								<div class="mainStory-gallery-img-container">
 								  <div class="imgHolder">
 								    <img src="images/ch-locker-bedroom.png" />
-								    <figcaption><h3>Bedroom lockers</h3></figcaption>
+								    <figcaption class="funny"><h3>Bedroom lockers</h3></figcaption>
 								  </div>
 								</div>
 								<div class="mainStory-gallery-img-container">
 								  <div class="imgHolder">
 								    <img src="images/redbull-skydive.png" />
-								    <figcaption><h3>24 Mile Sky Dive</h3></figcaption>
+								    <figcaption class="news"><h3>24 Mile Sky Dive</h3></figcaption>
 								  </div>
 								</div>
 								<div class="mainStory-gallery-img-container">
 								  <div class="imgHolder">
 								    <img src="images/rt-politics.png" />
-								    <figcaption><h3>Bradley Manning to Receive Life in Prison</h3></figcaption>
+								    <figcaption class="news"><h3>Bradley Manning to Receive Life in Prison</h3></figcaption>
 								  </div>
 								</div>
 								<div class="mainStory-gallery-img-container">
 								  <div class="imgHolder">
 								    <img src="images/uk-amir-khan.png" />
-								    <figcaption><h3>Amir’s attackers on what happened…</h3></figcaption>
+								    <figcaption class="peculiar"><h3>Amir’s attackers on what happened…</h3></figcaption>
 								  </div>
 								</div>
 								<div class="mainStory-gallery-img-container">
 								  <div class="imgHolder">
 								    <img src="images/uk-kendra.png" />
-								    <figcaption><h3>Kendra Morris – Pow</h3></figcaption>
+								    <figcaption class="music"><h3>Kendra Morris – Pow</h3></figcaption>
 								  </div>
 								</div>
 								<div class="mainStory-gallery-img-container">
 								  <div class="imgHolder">
 								    <img src="images/us-dr-dre-snoop-dogg.png" />
-								    <figcaption><h3>Dr. Dre & Snoop Dogg - PSA</h3></figcaption>
+								    <figcaption class="music"><h3>Dr. Dre & Snoop Dogg - PSA</h3></figcaption>
 								  </div>
 								</div>
 							</div>

@@ -293,6 +293,18 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.peculiar {
+  border-bottom: 4px solid #720d5b; }
+
+.news {
+  border-bottom: 4px solid #cf3104; }
+
+.funny {
+  border-bottom: 4px solid #bca000; }
+
+.music {
+  border-bottom: 4px solid #018e4a; }
+
 .group:after {
   content: "";
   display: table;
@@ -326,14 +338,10 @@ input, select, textarea {
   .userPane input::-webkit-input-placeholder {
     color: white; }
 .userPane button {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
+  height: 31px; }
+.userPane .loginButton {
   display: none; }
-.userPane input#search {
-  background: #000;
+.userPane input#searchInput {
   width: 10em; }
 .userPane input#login.loginInput {
   width: 9.5em; }
@@ -562,7 +570,7 @@ html {
 
 .userPane {
   float: right;
-  width: 36em;
+  width: 36.8em;
   height: 4em;
   background: #fff;
   margin: 1em 0 1.5em;
@@ -571,17 +579,17 @@ html {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px; }
-  .userPane .searchContainer, .userPane form {
+  .userPane .searchContainer, .userPane .loginForm {
     float: left;
     position: relative;
     padding: 1em 0 0 3.8em; }
-    .userPane .searchContainer .iconSize, .userPane form .iconSize {
+    .userPane .searchContainer .iconSize, .userPane .loginForm .iconSize {
       position: absolute;
       top: 0.2em;
       left: 0.2em;
       font-size: 2.7em; }
-  .userPane form {
-    padding-left: 5em; }
+  .userPane .loginForm {
+    padding-left: 2.6em; }
 
 nav {
   background: #fff;
@@ -638,6 +646,11 @@ article {
     float: left;
     width: 275px;
     height: 189px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
     margin: 0 1em 0 0;
     border: 1px solid #000;
     padding: 0.2em;
@@ -682,7 +695,12 @@ article {
     position: absolute;
     overflow: hidden;
     width: 206px;
-    height: 116px; }
+    height: 116px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px; }
     .mainStory-gallery-img-container .imgHolder img {
       width: 212px;
       height: 122px;
@@ -709,6 +727,12 @@ article {
     .mainStory-gallery-img-container .imgHolder:hover figcaption {
       margin: 0 0 0;
       background: black;
+      -moz-border-radius-bottomleft: 8px;
+      -webkit-border-bottom-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      -moz-border-radius-bottomright: 8px;
+      -webkit-border-bottom-right-radius: 8px;
+      border-bottom-right-radius: 8px;
       opacity: 1; }
     .mainStory-gallery-img-container .imgHolder h3 {
       padding: 0.4em 0.4em 0;
@@ -800,11 +824,11 @@ article {
 
 .widget-topComments {
   padding: 0 0 1.4em 0;
+  font-size: 0.7em;
   border-bottom: 1px dotted #ccc; }
   .widget-topComments h2 {
     text-align: right; }
   .widget-topComments table {
-    font-size: 0.7em;
     table-layout: fixed; }
   .widget-topComments td {
     padding: 0 0.5em;
@@ -819,9 +843,10 @@ article {
     -o-border-radius: 4px;
     border-radius: 4px; }
   .widget-topComments td.commentTd {
-    font-size: 1.45em;
+    font-size: 1.3em;
+    text-align: center;
     color: #fff;
-    padding: 0.8em 0 0; }
+    padding: 0.8em 0.8em 0; }
     .widget-topComments td.commentTd a, .widget-topComments td.commentTd span {
       float: right; }
     .widget-topComments td.commentTd a {
@@ -840,7 +865,9 @@ article {
       width: 85%; }
     .widget-topComments td.commentTd span {
       color: #000;
-      margin: 0.1em 0 0.4em; }
+      margin: 0.1em 0 0.4em;
+      font-size: 0.8em;
+      padding: 0 1em; }
 
 .rightSidebar {
   background: #fff;

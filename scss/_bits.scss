@@ -1,3 +1,12 @@
+// COLOURS //
+
+$purple: #720d5b;
+$red: #cf3104;
+$yellow: #bca000;
+$green: #018e4a;
+$blue: #004078;
+$logoYellow: #f9c22a;
+
 
 // VARS //
 
@@ -35,6 +44,27 @@ $ContainerPadding: 2em;
     color: $color; 
   } 
 }
+
+
+
+// COLOUR VARIATIONS //
+
+// GALLERY //
+
+.peculiar {
+  border-bottom: 4px solid $purple;
+}
+.news {
+  border-bottom: 4px solid $red;
+}
+.funny {
+  border-bottom: 4px solid $yellow;
+}
+.music {
+  border-bottom: 4px solid $green;
+}
+
+
 
 
 // CLEARFIX //

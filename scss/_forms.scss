@@ -22,11 +22,12 @@ input, select, textarea {
 	@include border-radius(4px);
 	}
 	button {
-		@include border-radius(4px);
+		height: 31px;
+	}
+	.loginButton {
 		display: none // I want to make it appear when users complete both USER/PASS fields //
 	}
-	input#search {
-		background: #000;
+	input#searchInput {
 		width: 10em;
 	}
 	input#login.loginInput {
